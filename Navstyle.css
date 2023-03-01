@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Babylonica&family=Lobster&family=Roboto&display=swap');
+
+*{margin: 0; 
+    padding: 0;
+     box-sizing: border-box;
+    font-family: 'roboto';
+    list-style: none;
+    text-decoration: none;
+}
+
+nav{
+    height: 8vh;
+    background-color: #5763b3;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10% 0 5%;
+    width: 100vw;
+
+} 
+
+.logo{
+font-weight: 600;
+font-size: 4vh;
+color: gold;
+border: 2px solid black;
+padding: 3px;
+border-radius: 8px;
+background-color: #171818;
+}
+
+nav ul {
+    display: flex;
+   
+}
+
+a{
+    color:rgb(252, 252, 252);
+    padding: 6px;
+   
+}
+
+ul li {
+    padding: 10px;
+    font-size: large;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+   a:hover , .active {
+    background-color: #fff;
+    color: black;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.logo:hover{
+    transform: rotate(360deg);
+    transition: all 1s ease;
+    cursor: pointer;
+    background-color: #161616;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+#img{
+    height: 15px;
+    width: 20px;
+    display: none;
+    cursor: pointer;
+}
+
+#bgi{
+    height: 100vh;
+    width: 100vw;
+    z-index: 1;
+}
+
+#menu-icon {
+
+    display: none;
+}
+
+/*--------------- Responsive setting -----------------  */
+
+@media (max-width : 740px){
+    
+    #img {
+        display: block;
+    }
+  
+    nav{
+        justify-content: space-between;
+        z-index: 2;
+      
+    }
+   
+    nav ul {
+        position: fixed ; 
+        top : 80px;
+        left: -100%;
+        height: 80vh;
+        width: 100%;
+        background: #121111;
+        display: block;
+        text-align: center;
+        transition: all 0.2s ease-out;
+      
+       
+    }
+
+    nav ul li {
+        margin: 40px 0;
+        justify-content: space-around;
+    }
+
+    
+
+    #menu-icon:checked ~ ul{
+        left: 0;
+    }
+
+    a:hover , .active {
+        background: none;
+        color: cyan;
+        border-radius: 5px;
+        transition: all 0.3s ease;
+    }
+
+    
+}
